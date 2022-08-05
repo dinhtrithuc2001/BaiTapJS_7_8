@@ -42,6 +42,7 @@
             font-size: 22px;
             color: #f7e308;
         }
+        
     </style>
 </head>
 
@@ -121,18 +122,19 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseFour" aria-expanded="false"
                                 aria-controls="flush-collapseFour">
+                                
                                 <span class="numberIcon me-2">4</span>Tìm số dương nhỏ nhất
                             </button>
                         </h2>
                         <div id="flush-collapseFour" class="accordion-collapse collapse"
                             aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body"><button class="btn btn-primary  mt-2 shadow ">Tìm số
+                            <div class="accordion-body"><button class="btn btn-primary mt-2 shadow " id="btnSoDuongNhoNhat">Tìm số
                                     dương
                                     nhỏ
                                     nhất</button>
                                 <div class="d-flex mt-3 align-items-center">
                                     <i class="fa-solid fa-hand-point-right me-2"></i>
-                                    <input type="text" disabled id="" class="w-100 form-control">
+                                    <input type="text" disabled id="ketQuaSoDuongNhoNhat" class="w-100 form-control">
                                 </div>
                             </div>
                         </div>
@@ -147,11 +149,11 @@
                         </h2>
                         <div id="flush-collapseFive" class="accordion-collapse collapse"
                             aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body"><button class="btn btn-primary  mt-2 shadow ">Tìm số
+                            <div class="accordion-body"><button class="btn btn-primary  mt-2 shadow " onclick="btnSoChanCuoiCung()">Tìm số
                                     chẵn</button>
                                 <div class="d-flex mt-3 align-items-center">
                                     <i class="fa-solid fa-hand-point-right me-2"></i>
-                                    <input type="text" disabled id="" class="w-100 form-control">
+                                    <input type="text" disabled id="ketQuaSoChanCuoiCung" class="w-100 form-control">
                                 </div>
                             </div>
                         </div>
@@ -168,15 +170,15 @@
                             aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <div class="row mt-2">
-                                    <div class="col-12 col-lg-6"><input type="number" class="form-control"
+                                    <div class="col-12 col-lg-6"><input id="index1" type="number" class="form-control"
                                             placeholder="Nhập số vị trí 1"></div>
-                                    <div class="col-12 col-lg-6"><input type="number" class="form-control"
+                                    <div class="col-12 col-lg-6"><input id="index2" type="number" class="form-control"
                                             placeholder="Nhập số vị trí 2"></div>
                                 </div>
-                                <button class="btn btn-primary mt-3 shadow ">Đổi chỗ</button>
+                                <button class="btn btn-primary mt-3 shadow" id="btnDoiCho">Đổi chỗ</button>
                                 <div class="d-flex mt-3 align-items-center">
                                     <i class="fa-solid fa-hand-point-right me-2"></i>
-                                    <input type="text" disabled id="" class="w-100 form-control">
+                                    <input type="text" disabled id="ketQuaSauKhiDoi" class="w-100 form-control">
                                 </div>
                             </div>
                         </div>
@@ -191,11 +193,11 @@
                         </h2>
                         <div id="flush-collapseSeven" class="accordion-collapse collapse"
                             aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body"><button class="btn btn-primary mt-2 shadow ">Sắp xếp</button>
+                            <div class="accordion-body"><button id="btnSapXepTang" class="btn btn-primary mt-2 shadow ">Sắp xếp</button>
                                 <div class="d-flex mt-3 align-items-center">
                                     <i class="fa-solid fa-hand-point-right me-2"></i>
-                                    <input type="text" disabled id="" class="w-100 form-control">
-                                </div>
+                                    <input type="text" disabled id="ketQuaSapXepTang" class="w-100 form-control">
+                                   </div>
                             </div>
                         </div>
                     </div>
@@ -209,11 +211,11 @@
                         </h2>
                         <div id="flush-collapseEight" class="accordion-collapse collapse"
                             aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body"><button class="btn btn-primary mt-2 shadow ">Tìm số nguyên
+                            <div class="accordion-body"><button id="btnTimSoNguyenToDauTien" class="btn btn-primary mt-2 shadow ">Tìm số nguyên
                                     tố</button>
                                 <div class="d-flex mt-3 align-items-center">
                                     <i class="fa-solid fa-hand-point-right me-2"></i>
-                                    <input type="text" disabled id="" class="w-100 form-control">
+                                    <input id="soNguyenToDauTien" type="text" disabled id="" class="w-100 form-control">
                                 </div>
                             </div>
                         </div>
@@ -229,17 +231,17 @@
                         <div id="flush-collapseNine" class="accordion-collapse collapse"
                             aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                                <input type="number" id="" class="form-control w-50 mb-2 " style="margin-left: 29px;"
+                                <input type="number" id="inputThemSoNguyen" class="form-control w-50 mb-2 " style="margin-left: 29px;"
                                     placeholder="Nhập số">
-                                <button class="btn btn-primary shadow ">Thêm số</button>
+                                <button class="btn btn-primary shadow " id="btnThemSoNguyen">Thêm số</button>
                                 <div class="d-flex mt-2 align-items-center">
                                     <i class="fa-solid fa-hand-point-right me-2"></i>
-                                    <input type="text" disabled id="" class="w-100 form-control">
+                                    <input type="text" disabled id="outputMangSoCanKiemTra" class="w-100 form-control">
                                 </div>
-                                <button class="btn btn-primary mt-5 shadow ">Đếm số nguyên</button>
+                                <button class="btn btn-primary mt-5 shadow" id="btnDemSoNguyen">Đếm số nguyên</button>
                                 <div class="d-flex mt-3 align-items-center">
                                     <i class="fa-solid fa-hand-point-right me-2"></i>
-                                    <input type="text" disabled id="" class="w-100 form-control">
+                                    <input type="text" disabled id="ketQuaDemSoNguyen" class="w-100 form-control">
                                 </div>
                             </div>
                         </div>
@@ -255,10 +257,10 @@
                         <div id="flush-collapseTen" class="accordion-collapse collapse"
                             aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                                <button class="btn btn-primary mt-2 shadow ">So sánh</button>
+                                <button class="btn btn-primary mt-2 shadow " id="btnSoSanhAmDuong">So sánh</button>
                                 <div class="d-flex mt-3 align-items-center">
                                     <i class="fa-solid fa-hand-point-right me-2"></i>
-                                    <input type="text" disabled id="" class="w-100 form-control">
+                                    <input type="text" disabled id="ketQuaAmDuong" class="w-100 form-control">
                                 </div>
                             </div>
                         </div>
@@ -275,6 +277,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
         crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
